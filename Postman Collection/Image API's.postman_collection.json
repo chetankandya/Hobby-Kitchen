@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "16a13b54-a9c8-4eeb-9c3a-5698fe253731",
+		"name": "Image API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGV5QGdtYWlsLmNvbSIsImF1dGgiOiJ1c2VyIiwiaWF0IjoxNjUyOTczOTgxLCJleHAiOjE2NTI5NzQxNjF9.DVTD2YCzDQ0UFM5bitzonHMC8Okz2XAqYJZ13syA8sw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/hp/Downloads/soup.jpg"
+						},
+						{
+							"key": "dishId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/image/upload?image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"image",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "image",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGV5QGdtYWlsLmNvbSIsImF1dGgiOiJ1c2VyIiwiaWF0IjoxNjUzMDY5MDM2LCJleHAiOjE2NTMwNjkyMTZ9.Hot6WQcWyHD8j_6Rh8z5F4_ZUdnibiDC7s03l6aeabQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/image/view/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"image",
+						"view",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/image/delete/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"image",
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

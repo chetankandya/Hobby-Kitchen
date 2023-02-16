@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "7f5ba29a-15db-473e-969f-e00de37503ee",
+		"name": "Order API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update Order by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isCompleted\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/order/update/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"order",
+						"update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGV5QGdtYWlsLmNvbSIsImF1dGgiOiJ1c2VyIiwiaWF0IjoxNjUzMDc3MDE5LCJleHAiOjE2NTMwNzcxOTl9.SwoZg4_nQB6uLVz_fZ-MWreXLSLPAs8s7Je97QAbj1k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"chetan@gmail.com\",\r\n\"isCompleted\": \"False\",\r\n\"dateOfOrder\": \"20-04-2022\",\r\n\"totalPrice\": \"250.0\",\r\n\"dishList\": [\r\n\t{   \r\n    \"name\": \"Salad\",\r\n    \"description\": \"Mix some vegetables\",\r\n    \"recipe\": \"Add some tomatoes, cabbage, olives, salt, pepper and Olive oil and mix well\",\r\n    \"price\": \"250.0\",\r\n    \"inUse\": \"False\"\r\n\t}\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/order/viewByEmail/chetan@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"order",
+						"viewByEmail",
+						"chetan@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/order/viewAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"order",
+						"viewAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check order Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/order/checkStatus/false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"order",
+						"checkStatus",
+						"false"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "4172d8d3-9461-4910-979f-715bc9276199",
+		"name": "Dish API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete dish by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/dish/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"dish",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get dish by dish Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/dish/view/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"dish",
+						"view",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All DIshes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGV0YW5AZ21haWwuY29tIiwiYXV0aCI6ImFkbWluIiwiaWF0IjoxNjUyOTY3MjU3LCJleHAiOjE2NTI5Njc0Mzd9.OF3RveJ3G1PNcLOntPPg4Sl9GuINcLTGOG48yxHqqZg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n\t\"transactionId\": 1,\r\n    \"fromAccount\": \"NZ3546\",\r\n    \"toAccount\": \"NZ5343\",\r\n    \"amount\": \"20000\",\r\n    \"date\" : \"2020-04-13\",\r\n    \"name\": \"Chetan Kandya\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/dish/viewAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"dish",
+						"viewAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Dish by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imageName\": \"veg-salad.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/dish/update/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"dish",
+						"update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Dish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGV0YW5AZ21haWwuY29tIiwiYXV0aCI6ImFkbWluIiwiaWF0IjoxNjUyOTY3MjU3LCJleHAiOjE2NTI5Njc0Mzd9.OF3RveJ3G1PNcLOntPPg4Sl9GuINcLTGOG48yxHqqZg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mango Shake\",\r\n    \"description\": \"Tasty mango shake\",\r\n    \"recipe\": \"Blend some mangoes with sugar and milk\",\r\n    \"creationDate\": null,\r\n    \"price\": 35.0,\r\n    \"inUse\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/v1/dish/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"dish",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dishes In Use",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/v1/dish/checkStatus/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"v1",
+						"dish",
+						"checkStatus",
+						"true"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
